@@ -101,3 +101,18 @@ interface subFunc {
 }
 
 let totalFunc: subFunc = (x: number, y: number): number => x + y;
+
+// Class
+
+class Animal {
+  id: number;
+  name: string;
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+}
+
+const lion = new Animal(1010101010, "lion");
+const cat = new Animal(101010, "cat");

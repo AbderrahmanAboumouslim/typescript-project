@@ -72,3 +72,12 @@ let lang = {
     // we can skip the 'paid' without a problem, because of it is optional '?'.
 };
 let totalFunc = (x, y) => x + y;
+// Class
+class Animal {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+const lion = new Animal(1010101010, "lion");
+const cat = new Animal(101010, "cat");
