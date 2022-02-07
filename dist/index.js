@@ -63,7 +63,12 @@ let employeeId = eid;
 // console.log(typeof employeeId); // Output: number
 // Function
 const currentAge = (birthYear, currentYear) => currentYear - birthYear;
-console.log(currentAge(2100, 2200)); //Output: 100
+// console.log(currentAge(2100, 2200)); //Output: 100
 // Void
 const showMessage = (message) => console.log(message);
-// showMessage("Message from the function showMessage"); // Output: Message from the function showMessage;
+let lang = {
+    id: 101010,
+    name: "typescript",
+    // we can skip the 'paid' without a problem, because of it is optional '?'.
+};
+let totalFunc = (x, y) => x + y;

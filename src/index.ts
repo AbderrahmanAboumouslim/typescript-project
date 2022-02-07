@@ -77,8 +77,27 @@ let employeeId = <number>eid;
 // Function
 const currentAge = (birthYear: number, currentYear: number): number =>
   currentYear - birthYear;
-console.log(currentAge(2100, 2200)); //Output: 100
+// console.log(currentAge(2100, 2200)); //Output: 100
 
 // Void
 const showMessage = (message: string | number): void => console.log(message);
 // showMessage("Message from the function showMessage"); // Output: Message from the function showMessage;
+//
+// interface
+interface defaultInterface {
+  id: number;
+  name: string;
+  paid?: boolean;
+}
+
+let lang: defaultInterface = {
+  id: 101010,
+  name: "typescript",
+  // we can skip the 'paid' without a problem, because of it is optional '?'.
+};
+
+interface subFunc {
+  (a: number, b: number): number;
+}
+
+let totalFunc: subFunc = (x: number, y: number): number => x + y;
