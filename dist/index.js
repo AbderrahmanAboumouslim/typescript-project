@@ -81,3 +81,14 @@ class Animal {
 }
 const lion = new Animal(1010101010, "lion");
 const cat = new Animal(101010, "cat");
+class AnimalInterface {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    greeting() {
+        return `Hey! I'm ${this.name}.`;
+    }
+}
+const dog = new AnimalInterface(1010101010, "dog");
+const bird = new AnimalInterface(101010, "bird");

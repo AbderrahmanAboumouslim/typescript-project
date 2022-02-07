@@ -116,3 +116,27 @@ class Animal {
 
 const lion = new Animal(1010101010, "lion");
 const cat = new Animal(101010, "cat");
+
+// adding interface to the class
+interface myBuild {
+  id: number;
+  name: string;
+  greeting(): string;
+}
+
+class AnimalInterface implements myBuild {
+  id: number;
+  name: string;
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  greeting() {
+    return `Hey! I'm ${this.name}.`;
+  }
+}
+
+const dog = new AnimalInterface(1010101010, "dog");
+const bird = new AnimalInterface(101010, "bird");
