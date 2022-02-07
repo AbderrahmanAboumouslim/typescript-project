@@ -55,7 +55,7 @@ enum roadMapTopTier {
   third = "third",
   fourth = "fourth",
 }
-// console.log(roadMapTopTier.first, roadMapTopTier.second) //Output: 3 4
+// console.log(roadMapTopTier.first, roadMapTopTier.second) //Output: first second
 
 // Object
 type Login = {
@@ -140,3 +140,33 @@ class AnimalInterface implements myBuild {
 
 const dog = new AnimalInterface(1010101010, "dog");
 const bird = new AnimalInterface(101010, "bird");
+
+// class with extends
+
+class NewAnimal extends AnimalInterface {
+  type: string;
+
+  constructor(id: number, name: string, type: string) {
+    super(id, name);
+    this.type = type;
+  }
+}
+const newAnimal = new NewAnimal(100020003000, "tiger", "danger");
+// console.log(newAnimal.greeting());
+
+// Generics
+// 1:
+const myArr = <X>(items: X[]): X[] => {
+  return items;
+};
+
+let arrOne = myArr<number>([2, 4, 5]);
+console.log(arrOne); //Output: [2, 4, 5]
+
+// 2:
+const num = <X>(items: X[]): X => {
+  return items[items.length - 1];
+};
+
+let nummy = num<number>([4, 6, 38, 9]);
+console.log(nummy); // Output: 9

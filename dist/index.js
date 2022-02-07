@@ -92,3 +92,25 @@ class AnimalInterface {
 }
 const dog = new AnimalInterface(1010101010, "dog");
 const bird = new AnimalInterface(101010, "bird");
+// class with extends
+class NewAnimal extends AnimalInterface {
+    constructor(id, name, type) {
+        super(id, name);
+        this.type = type;
+    }
+}
+const newAnimal = new NewAnimal(100020003000, "tiger", "danger");
+// console.log(newAnimal.greeting());
+// Generics
+// 1:
+const myArr = (items) => {
+    return items;
+};
+let arrOne = myArr([2, 4, 5]);
+console.log(arrOne); //Output: [2, 4, 5]
+// 2:
+const num = (items) => {
+    return items[items.length - 1];
+};
+let nummy = num([4, 6, 38, 9]);
+console.log(nummy); // Output: 9
