@@ -40,7 +40,7 @@ enum roadMap {
   third,
   fourth,
 }
-// console.log(roadMap.first, roadMap.second) .output => 0 1
+// console.log(roadMap.first, roadMap.second) //output: 0 1
 
 enum roadMapTop {
   first = 3,
@@ -48,7 +48,7 @@ enum roadMapTop {
   third,
   fourth,
 }
-// console.log(roadMapTop.first, roadMapTop.second) .output => 3 4
+// console.log(roadMapTop.first, roadMapTop.second) //output: 3 4
 
 enum roadMapTopTier {
   first = "first",
@@ -56,4 +56,25 @@ enum roadMapTopTier {
   third = "third",
   fourth = "fourth",
 }
-// console.log(roadMapTopTier.first, roadMapTopTier.second) .output => 3 4
+// console.log(roadMapTopTier.first, roadMapTopTier.second) //Output: 3 4
+
+// Object
+type Login = {
+  email: string;
+  password: number;
+};
+
+const login: Login = {
+  email: "example@example.com",
+  password: 10101010101010,
+};
+
+// Type Assertion
+let eid: any = 101010;
+let employeeId = <number>eid;
+// console.log(typeof employeeId); // Output: number
+
+// Function
+const currentAge = (birthYear: number, currentYear: number) =>
+  currentYear - birthYear;
+// console.log(2100, 2200); //Output: 100

@@ -37,7 +37,7 @@ var roadMap;
     roadMap[roadMap["third"] = 2] = "third";
     roadMap[roadMap["fourth"] = 3] = "fourth";
 })(roadMap || (roadMap = {}));
-// console.log(roadMap.first, roadMap.second) .output => 0 1
+// console.log(roadMap.first, roadMap.second) //output: 0 1
 var roadMapTop;
 (function (roadMapTop) {
     roadMapTop[roadMapTop["first"] = 3] = "first";
@@ -45,7 +45,7 @@ var roadMapTop;
     roadMapTop[roadMapTop["third"] = 5] = "third";
     roadMapTop[roadMapTop["fourth"] = 6] = "fourth";
 })(roadMapTop || (roadMapTop = {}));
-// console.log(roadMapTop.first, roadMapTop.second) .output => 3 4
+// console.log(roadMapTop.first, roadMapTop.second) //output: 3 4
 var roadMapTopTier;
 (function (roadMapTopTier) {
     roadMapTopTier["first"] = "first";
@@ -53,4 +53,14 @@ var roadMapTopTier;
     roadMapTopTier["third"] = "third";
     roadMapTopTier["fourth"] = "fourth";
 })(roadMapTopTier || (roadMapTopTier = {}));
-// console.log(roadMapTopTier.first, roadMapTopTier.second) .output => 3 4
+const login = {
+    email: "example@example.com",
+    password: 10101010101010,
+};
+// Type Assertion
+let eid = 101010;
+let employeeId = eid;
+// console.log(typeof employeeId); // Output: number
+// Function
+const currentAge = (birthYear, currentYear) => currentYear - birthYear;
+// console.log(2100, 2200); //Output: 100
