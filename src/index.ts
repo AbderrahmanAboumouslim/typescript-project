@@ -170,3 +170,41 @@ const num = <X>(items: X[]): X => {
 
 let nummy = num<number>([4, 6, 38, 9]);
 console.log(nummy); // Output: 9
+
+// 3-a:
+const generateArr = <X, Y>(x: X, y: Y) => {
+  return [x, y];
+};
+let arryA = generateArr(3, 4);
+let arryAa = generateArr<number, number>(3, 4);
+
+let arryB = generateArr("txt", 909);
+let arryBb = generateArr<string, number>("txt", 909);
+
+// 4:
+const generateFullnameA = (object: { firstName: string; lastName: string }) => {
+  return {
+    ...object,
+    fullName: object.firstName + " " + object.lastName,
+  };
+};
+let nameOne = generateFullnameA({
+  firstName: "Abderrahman",
+  lastName: "Aboumouslim",
+});
+console.log(nameOne);
+
+//3-b: what if the generateFullname has an extra param 'age'
+const generateFullnameB = <X extends { firstName: string; lastName: string }>(
+  object: X
+) => {
+  return {
+    ...object,
+    fullName: object.firstName + " " + object.lastName,
+  };
+};
+let nameTwo = generateFullnameB({
+  firstName: "Mike",
+  lastName: "Brown",
+  age: 90,
+});

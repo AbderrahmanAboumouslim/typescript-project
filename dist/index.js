@@ -114,3 +114,29 @@ const num = (items) => {
 };
 let nummy = num([4, 6, 38, 9]);
 console.log(nummy); // Output: 9
+// 3-a:
+const generateArr = (x, y) => {
+    return [x, y];
+};
+let arryA = generateArr(3, 4);
+let arryAa = generateArr(3, 4);
+let arryB = generateArr("txt", 909);
+let arryBb = generateArr("txt", 909);
+// 4:
+const generateFullnameA = (object) => {
+    return Object.assign(Object.assign({}, object), { fullName: object.firstName + " " + object.lastName });
+};
+let nameOne = generateFullnameA({
+    firstName: "Abderrahman",
+    lastName: "Aboumouslim",
+});
+console.log(nameOne);
+//3-b: what if the generateFullname has an extra param 'age'
+const generateFullnameB = (object) => {
+    return Object.assign(Object.assign({}, object), { fullName: object.firstName + " " + object.lastName });
+};
+let nameTwo = generateFullnameB({
+    firstName: "Mike",
+    lastName: "Brown",
+    age: 90,
+});
