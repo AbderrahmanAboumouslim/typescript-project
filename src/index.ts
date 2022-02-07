@@ -26,3 +26,34 @@ shoppingCart = [
   [1, "soda"],
   [1, "laptop"],
 ];
+
+// Union
+let id: number | string;
+id = "101010";
+id = 101010;
+id = "text";
+
+// Enum
+enum roadMap {
+  first,
+  second,
+  third,
+  fourth,
+}
+// console.log(roadMap.first, roadMap.second) .output => 0 1
+
+enum roadMapTop {
+  first = 3,
+  second,
+  third,
+  fourth,
+}
+// console.log(roadMapTop.first, roadMapTop.second) .output => 3 4
+
+enum roadMapTopTier {
+  first = "first",
+  second = "second",
+  third = "third",
+  fourth = "fourth",
+}
+// console.log(roadMapTopTier.first, roadMapTopTier.second) .output => 3 4
