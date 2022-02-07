@@ -9,7 +9,6 @@ random = true;
 let topSecretCodes: number[] = [284819, 482849, 290500, 300941];
 /* topSecretCodes.push('Abderrahman') // this is a mistake, because array is specified to be filled of numbers.*/
 topSecretCodes.push(100100010);
-console.log(topSecretCodes);
 let randomArray: any[] = [1010, false, "hello"];
 
 // Tuple
@@ -72,9 +71,14 @@ const login: Login = {
 // Type Assertion
 let eid: any = 101010;
 let employeeId = <number>eid;
+// let employeeId = eid as number;
 // console.log(typeof employeeId); // Output: number
 
 // Function
-const currentAge = (birthYear: number, currentYear: number) =>
+const currentAge = (birthYear: number, currentYear: number): number =>
   currentYear - birthYear;
-// console.log(2100, 2200); //Output: 100
+console.log(currentAge(2100, 2200)); //Output: 100
+
+// Void
+const showMessage = (message: string | number): void => console.log(message);
+// showMessage("Message from the function showMessage"); // Output: Message from the function showMessage;
